@@ -17,12 +17,18 @@ document.getElementById('btn-donate').addEventListener('click',function(){
     console.log(mainBalance)
 
     
-    
+    if(addmoney >= 0 ){
+       const modal=document.getElementById('my_modal_1')
+       modal.showModal()
+      }else{
+       alert('invalid input')
+      
+    }
 
 
 })
 
-//secend card **********
+//secend card 2 **********
 document.getElementById('btn-donate-secend').addEventListener('click',function(){
    console.log('clicked secend btn')
    const addmoney=getInputFieldValueById('secend-input-amount')
@@ -37,6 +43,27 @@ document.getElementById('btn-donate-secend').addEventListener('click',function()
    const newTotalMainBalance=document.getElementById('main-balance')
    newTotalMainBalance.innerText=`${totalMainBalance} BDT`
     console.log(mainBalance)
+
+    if(addmoney >= 0 ){
+      const modal=document.getElementById('my_modal_1')
+      modal.showModal()
+     }else{
+      alert('invalid input')
+     
+   }
+
+   const donatetitles=document.getElementById('secend-donate-title').innerText
+const historyInput=getInputFieldValueById('secend-input-amount')
+   const historyItem= document.createElement('div')
+        historyItem.className="bg-gray-200 p-3 rounded-2xl mb-3 border-1-2 border-indigo-500";
+        historyItem.innerHTML=`
+        <p class="text-2xl ">${historyInput} Take is ${donatetitles}</p>
+        <p class="text-xl">${new Date().toDateString()}</p>
+        `
+        const historyContainer=document.getElementById('history-list')
+        historyContainer.insertBefore(historyItem,historyContainer.firstChild)
+
+   
 })
 
 //third card
@@ -54,6 +81,14 @@ document.getElementById('btn-donate-third').addEventListener('click',function(){
    const newTotalMainBalance=document.getElementById('main-balance')
    newTotalMainBalance.innerText=`${totalMainBalance} BDT`
     console.log(mainBalance)
+
+    if(addmoney >= 0 ){
+      const modal=document.getElementById('my_modal_1')
+      modal.showModal()
+     }else{
+      alert('invalid input')
+     
+   }
 })
 
 
@@ -75,14 +110,12 @@ historyTab.addEventListener('click',function(){
 
      //history item
      const addmoney=getInputFieldValueById('input-donate-amount')
-     const secend=getInputFieldValueById('btn-donate-secend')
-     const third =getInputFieldValueById('btn-donate-third')
      const donatetitle=document.getElementById('donate-title').innerText
      
      const historyItem= document.createElement('div')
         historyItem.className="bg-gray-200 p-3 rounded-2xl mb-3 border-1-2 border-indigo-500";
         historyItem.innerHTML=`
-        <p class="text-2xl ">${secend} Take is ${donatetitle}</p>
+        <p class="text-2xl ">${addmoney} Take is ${donatetitle}</p>
         <p class="text-xl">${new Date().toDateString()}</p>
         `
         const historyContainer=document.getElementById('history-list')
