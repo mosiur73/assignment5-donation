@@ -10,10 +10,10 @@
 </head>
 <body>
     <header class="bg-[#F9F7F3]">
-        <nav class="max-w-screen-xl mx-auto">
+        <nav class="max-w-screen-xl mx-auto fixed top-0 ">
             <div class="navbar justify-between items-center">
                 <div class="">
-                 <button class="btn bg-[#B4F461] py-2 px-6">Blog</button>
+                 <button id="btn-blog" class="btn bg-[#B4F461] py-2 px-6">Blog</button>
                 </div>
                 <div class=" flex gap-3 items-center navbar-center">
                    <img src="assets/logo.png" alt="">
@@ -21,18 +21,18 @@
                 </div>
                 <div class="flex gap-2">
                   <img src="assets/coin.png" alt="">
-                  <p>5500 BDT</p>
+                  <p id="main-balance">6500 BDT</p>
                 </div>
               </div>
         </nav>
 
     </header>
     <div class="flex justify-center items-center mt-20 gap-5">
-        <button class="btn bg-[#B4F461] py-2 px-6">Donation</button>
-        <button class="btn  py-2 px-6">History</button>
+        <button id="donation-tab" class="rounded-xl bg-[#B4F461] py-2 px-6">Donation</button>
+        <button id="history-tab" class=" py-2 px-6">History</button>
        
     </div>
-    <main class="max-w-screen-xl mx-auto px-5">
+    <main id="donate" class="max-w-screen-xl mx-auto px-5">
      <!-- card secton 1 -->
         <section class="flex  bg-gray-100 rounded-2xl  p-6 mt-9">
             <div class="w-full">
@@ -41,9 +41,9 @@
             <div class="w-full">
                 <div class="flex gap-3" >
                     <img src="assets/coin.png" alt="">
-                    <p>5500 BDT</p>
+                    <p id="total-donate">5000 BDT</p>
                  </div>
-                 <h2 class="text-2xl font-bold text-[#111111] mt-5">Donate for Flood at Noakhali, Bangladesh</h2>
+                 <h2 id="donate-title" class="text-2xl font-bold text-[#111111] mt-5">Donate for Flood at Noakhali, Bangladesh</h2>
                  <p class="text-[#111111B3] font-light text-xl mt-4">
                     The recent floods in Noakhali have caused significant damage to <br>
                      homes  infrastructure. Your donation will help provide essential <br>
@@ -51,11 +51,10 @@
                      big or small, makes  difference. Please join us in supporting the relief <br>
                      efforts and making a positive impact on the lives of those in need.
                  </p>
-                 <input
-                type="number"
+                 <input id="input-donate-amount" type="number"
                 placeholder="Write Donate Amount"
                 class="input input-bordered input-md w-full mt-5" /> <br>
-                 <button class="btn  bg-[#B4F461] py-2 w-full mt-6">Donate Now</button>
+                 <button id="btn-donate" class="btn  bg-[#B4F461] py-2 w-full mt-6">Donate Now</button>
             </div>
              
         </section>
@@ -67,7 +66,7 @@
             <div class="w-full">
                 <div class="flex gap-3" >
                     <img src="assets/coin.png" alt="">
-                    <p>5500 BDT</p>
+                    <p id="total-donate">5500 BDT</p>
                  </div>
                  <h2 class="text-2xl font-bold text-[#111111] mt-5">Donate for Flood at Noakhali, Bangladesh</h2>
                  <p class="text-[#111111B3] font-light text-xl mt-4">
@@ -80,10 +79,10 @@
                      efforts and making a positive impact on the lives of those in need.
                  </p>
                  <input
-                type="number"
+                 id="input-donate-amount" type="number"
                 placeholder="Write Donate Amount"
                 class="input input-bordered input-md w-full mt-5" /> <br>
-                 <button class="btn  bg-[#B4F461] py-2 w-full mt-6">Donate Now</button>
+                 <button id="btn-donate2" class="btn  bg-[#B4F461] py-2 w-full mt-6">Donate Now</button>
             </div>
              
         </section>
@@ -117,6 +116,12 @@
              
         </section>
     </main>
+    <footer>
+        <div id="history-list" class="hidden max-w-screen-xl mx-auto">
+           
+        </div>
+    </footer>
     <script src="js/index.js"></script>
+    <script src="js/utilities.js"></script>
 </body>
 </html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <header class="bg-[#F9F7F3]">
+    <nav class="max-w-screen-xl mx-auto">
+        <div class="navbar justify-between items-center">
+            <div class="">
+             <button id="blog-btn" class="btn bg-[#B4F461] py-2 px-6">Home</button>
+            </div>
+            <div class=" flex gap-3 items-center navbar-center">
+               <img src="assets/logo.png" alt="">
+                <h3 class="text-[#111111] text-xs lg:text-2xl font-semibold">Donate Bangladesh</h3>
+            </div>
+            <div class="flex gap-2">
+              <img src="assets/coin.png" alt="">
+              <p>5500 BDT</p>
+            </div>
+          </div>
+    </nav>
+
+</header>
+  <main id="blog-page" class="max-w-screen-xl mx-auto mt-10">
+    <h1 class="text-4xl text-[#111111] mb-6 font-extrabold">Inportant FAQ ?</h1>
+    <div class="join join-vertical w-full">
+        <div class="collapse collapse-arrow join-item border-base-300 border">
+          <input type="radio" name="my-accordion-4" checked="checked" />
+          <div class="collapse-title text-xl font-medium">What is JavaScript ?</div>
+          <div class="collapse-content">
+            <p>JavaScript is a client-side scripting language and Java is object Oriented Programming language. Both of them are totally different from each other.</p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow join-item border-base-300 border">
+          <input type="radio" name="my-accordion-4" />
+          <div class="collapse-title text-xl font-medium">What is JavaScript used for?</div>
+          <div class="collapse-content">
+            <p>
+                JavaScript is a scripting language used to develop web pages. 
+                Developed in Netscape, JS allows developers to create a dynamic
+                and interactive web page to interact with visitors and execute complex actions. It also enables users to load content into a document without reloading the entire page.
+            </p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow join-item border-base-300 border">
+          <input type="radio" name="my-accordion-4" />
+          <div class="collapse-title text-xl font-medium">How many data types are in JavaScript?</div>
+          <div class="collapse-content">
+            <p>
+                JavaScript data types are broadly categorized into primitive
+                 and non-primitive types. The primitive data types include 
+                 Number, String, Boolean, Null, Undefined, and Symbol. Non-primitive types include Object, Array, and Function.
+            </p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow join-item border-base-300 border">
+          <input type="radio" name="my-accordion-4" />
+          <div class="collapse-title text-xl font-medium">What is a JavaScript function?</div>
+          <div class="collapse-content">
+            <p>
+                A JavaScript function is a block of code designed 
+                to perform a particular task. A JavaScript function 
+                is executed when "something" invokes it (calls it).
+            </p>
+          </div>
+        </div>
+      </div>
+         
+    </main> 
+    <script src="js/index.js"></script>
+</body>
+</html>
