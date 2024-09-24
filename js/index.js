@@ -15,11 +15,7 @@ document.getElementById('btn-donate').addEventListener('click',function(){
    const newTotalMainBalance=document.getElementById('main-balance')
    newTotalMainBalance.innerText=`${totalMainBalance} BDT`
     console.log(mainBalance)
-
-    if(addmoney <= 0 || isNaN(addmoney)){
-      document.getElementById('input-error').classList.remove('hidden')
-      return
-    }
+    
 
 
 })
@@ -77,15 +73,16 @@ historyTab.addEventListener('click',function(){
 
      //history item
      const addmoney=getInputFieldValueById('input-donate-amount')
+     const secend=getInputFieldValueById('btn-donate-secend')
+     const third =getInputFieldValueById('btn-donate-third')
      const donatetitle=document.getElementById('donate-title').innerText
      
      const historyItem= document.createElement('div')
         historyItem.className="bg-gray-200 p-3 rounded-2xl mb-3 border-1-2 border-indigo-500";
         historyItem.innerHTML=`
-        <p class="text-2xl ">${addmoney} Take is ${donatetitle}</p>
+        <p class="text-2xl ">${secend} Take is ${donatetitle}</p>
         <p class="text-xl">${new Date().toDateString()}</p>
         `
-      //   document.getElementById('history-list').appendChild(historyItem)
         const historyContainer=document.getElementById('history-list')
         historyContainer.insertBefore(historyItem,historyContainer.firstChild)
 })
@@ -105,5 +102,3 @@ donateTab.addEventListener('click',function(){
 
 
 })
-
-

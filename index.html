@@ -58,7 +58,7 @@
                    <p id="input-error" class="text-red-500 text-xs mt-1 hidden">
                     ⚠️ Invalid input!
                   </p>
-                    <button id="btn-donate" class="btn  bg-[#B4F461] py-2 w-full mt-6">Donate Now</button>
+                    <button id="btn-donate" class="btn  bg-[#B4F461] py-2 w-full mt-6 "  onclick="my_modal_1.showModal()">Donate Now</button>
                </div>
                 
            </section>
@@ -85,7 +85,7 @@
                     <input id="secend-input-amount" type="number"
                    placeholder="Write Donate Amount"
                    class="input input-bordered input-md w-full mt-5" /> <br>
-                    <button id="btn-donate-secend" class="btn  bg-[#B4F461] py-2 w-full mt-6">Donate Now</button>
+                    <button id="btn-donate-secend" class="btn  bg-[#B4F461] py-2 w-full mt-6" onclick="my_modal_1.showModal()">Donate Now</button>
                </div>
                 
            </section>
@@ -113,7 +113,7 @@
                     <input id="third-input-amount" type="number"
                    placeholder="Write Donate Amount"
                    class="input input-bordered input-md w-full mt-5" /> <br>
-                    <button id="btn-donate-third" class="btn  bg-[#B4F461] py-2 w-full mt-6">Donate Now</button>
+                    <button id="btn-donate-third" class="btn  bg-[#B4F461] py-2 w-full mt-6" onclick="my_modal_1.showModal()">Donate Now</button>
                </div>
                 
            </section>
@@ -124,6 +124,23 @@
            
         </div>
     </footer>
+    <!-- modal show -->
+    <div>
+        <!-- <button class="btn" onclick="my_modal_1.showModal()">open modal</button> -->
+<dialog id="my_modal_1" class="modal">
+  <div class="modal-box">
+    <h3 class="text-lg font-bold">Hello!</h3>
+    <p class="py-4">Press ESC key or click the button below to close</p>
+    <div class="modal-action">
+      <form method="dialog">
+        
+        <button class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+# Dialog modal, closes when clic
+    </div>
     <script src="js/index.js"></script>
     <script src="js/utilities.js"></script>
     <script src="js/test.js"></script>
