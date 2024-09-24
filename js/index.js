@@ -15,6 +15,8 @@ document.getElementById('btn-donate').addEventListener('click',function(){
    const newTotalMainBalance=document.getElementById('main-balance')
    newTotalMainBalance.innerText=`${totalMainBalance} BDT`
     console.log(mainBalance)
+
+    
     
 
 
