@@ -92,6 +92,9 @@ document.getElementById('btn-donate-third').addEventListener('click',function(){
     console.log(mainBalance)
 
 
+    }else{
+      alert('Invalid Input')
+      return
     }
 
     
