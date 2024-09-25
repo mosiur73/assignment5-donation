@@ -5,25 +5,33 @@ document.getElementById('btn-donate').addEventListener('click',function(){
     
     const addmoney=getInputFieldValueById('input-donate-amount')
     const avaliableBalance=getTextFieldValueById('total-donate');
-    const newBalance=avaliableBalance + addmoney;
-    const totalDonate=document.getElementById('total-donate')
-    totalDonate.innerText=newBalance;
+    
 
     //minus main balance
     const mainBalance=getTextFieldValueById('main-balance')
-    const totalMainBalance=mainBalance - addmoney;
-   const newTotalMainBalance=document.getElementById('main-balance')
-   newTotalMainBalance.innerText=`${totalMainBalance} BDT`
-    console.log(mainBalance)
-
     
-    if(addmoney >= 0 ){
+
+    if(addmoney >= 0){
+      const newBalance=avaliableBalance + addmoney;
+      const totalDonate=document.getElementById('total-donate')
+      totalDonate.innerText=newBalance;
+
+      const totalMainBalance=mainBalance - addmoney;
+      const newTotalMainBalance=document.getElementById('main-balance')
+      newTotalMainBalance.innerText=`${totalMainBalance} BDT`
+       console.log(mainBalance)
+
        const modal=document.getElementById('my_modal_1')
        modal.showModal()
-      }else{
-       alert('invalid input')
-      
+
+
     }
+
+    
+    if(addmoney <= 0 ){
+       
+       alert('invalid input')
+      }
 
 
 })
@@ -33,36 +41,33 @@ document.getElementById('btn-donate-secend').addEventListener('click',function()
    console.log('clicked secend btn')
    const addmoney=getInputFieldValueById('secend-input-amount')
     const avaliableBalance=getTextFieldValueById('secend-total-donate');
-    const newBalance=avaliableBalance + addmoney;
-    const totalDonate=document.getElementById('secend-total-donate')
-    totalDonate.innerText=newBalance;
+    
 
     //minus main balance
     const mainBalance=getTextFieldValueById('main-balance')
-    const totalMainBalance=mainBalance - addmoney;
-   const newTotalMainBalance=document.getElementById('main-balance')
-   newTotalMainBalance.innerText=`${totalMainBalance} BDT`
-    console.log(mainBalance)
+   
+    if(addmoney >= 0){
 
-    if(addmoney >= 0 ){
-      const modal=document.getElementById('my_modal_1')
-      modal.showModal()
-     }else{
-      alert('invalid input')
-     
-   }
+      
+      const newBalance=avaliableBalance + addmoney;
+      const totalDonate=document.getElementById('secend-total-donate')
+      totalDonate.innerText=newBalance;
 
-   const donatetitles=document.getElementById('secend-donate-title').innerText
-const historyInput=getInputFieldValueById('secend-input-amount')
-   const historyItem= document.createElement('div')
-        historyItem.className="bg-gray-200 p-3 rounded-2xl mb-3 border-1-2 border-indigo-500";
-        historyItem.innerHTML=`
-        <p class="text-2xl ">${historyInput} Take is ${donatetitles}</p>
-        <p class="text-xl">${new Date().toDateString()}</p>
-        `
-        const historyContainer=document.getElementById('history-list')
-        historyContainer.insertBefore(historyItem,historyContainer.firstChild)
+      const totalMainBalance=mainBalance - addmoney;
+      const newTotalMainBalance=document.getElementById('main-balance')
+      newTotalMainBalance.innerText=`${totalMainBalance} BDT`
+       console.log(mainBalance)
 
+       const modal=document.getElementById('my_modal_1')
+         modal.showModal()
+
+    }else{
+      alert('Invalid Input')
+      return
+    }
+    
+    
+  
    
 })
 
@@ -71,24 +76,25 @@ document.getElementById('btn-donate-third').addEventListener('click',function(){
    console.log('clicked third btn')
    const addmoney=getInputFieldValueById('third-input-amount')
     const avaliableBalance=getTextFieldValueById('third-total-donate');
-    const newBalance=avaliableBalance + addmoney;
-    const totalDonate=document.getElementById('third-total-donate')
-    totalDonate.innerText=newBalance;
+    
 
     //minus main balance
     const mainBalance=getTextFieldValueById('main-balance')
-    const totalMainBalance=mainBalance - addmoney;
+    
+    if(addmoney >= 0){
+      const newBalance=avaliableBalance + addmoney;
+      const totalDonate=document.getElementById('third-total-donate')
+      totalDonate.innerText=newBalance;
+
+      const totalMainBalance=mainBalance - addmoney;
    const newTotalMainBalance=document.getElementById('main-balance')
    newTotalMainBalance.innerText=`${totalMainBalance} BDT`
     console.log(mainBalance)
 
-    if(addmoney >= 0 ){
-      const modal=document.getElementById('my_modal_1')
-      modal.showModal()
-     }else{
-      alert('invalid input')
-     
-   }
+
+    }
+
+    
 })
 
 
@@ -137,3 +143,5 @@ donateTab.addEventListener('click',function(){
 
 
 })
+
+
